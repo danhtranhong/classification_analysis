@@ -106,21 +106,21 @@ def ml_model(uploaded_file):
             if st.button("Predict"):
                 st.session_state.predictions = st.session_state.lr_model.predict(st.session_state.x_test)
                 st.write("Predictions on test data:", st.session_state.predictions)
-            actual_values = st.session_state.y_test.iloc[:, 0].values
-            results_df = pd.DataFrame({
-                "Actual": actual_values,
-                "Predicted": st.session_state.predictions
-            })
+                actual_values = st.session_state.y_test.iloc[:, 0].values
+                results_df = pd.DataFrame({
+                    "Actual": actual_values,
+                    "Predicted": st.session_state.predictions
+                })
             #
             # st.write("Predictions on test data:")
-            st.dataframe(results_df)
-            csv = results_df.to_csv(index=False)
-            st.download_button(
-                label="Download Results as CSV",
-                data=csv,
-                file_name='logistic_regression_predictions.csv',
-                mime='text/csv'
-            )
+                st.dataframe(results_df)
+                csv = results_df.to_csv(index=False)
+                st.download_button(
+                    label="Download Results as CSV",
+                    data=csv,
+                    file_name='logistic_regression_predictions.csv',
+                    mime='text/csv'
+                )
         with st.expander("Evaluate model with Metrics: Accuracy, Confusion Matrix, Classification Report, ROC curve"):
             if st.button("Evaluate"):
                 st.info("Accuracy")
@@ -218,21 +218,21 @@ def ml_model(uploaded_file):
                 st.session_state.predictions = st.session_state.dt_model.predict(st.session_state.x_test)
                 st.write("Predictions on test data:", st.session_state.predictions)
 
-            actual_values = st.session_state.y_test.iloc[:, 0].values
-            results_df = pd.DataFrame({
-                "Actual": actual_values,
-                "Predicted": st.session_state.predictions
-            })
-            #
-            # st.write("Predictions on test data:")
-            st.dataframe(results_df)
-            csv = results_df.to_csv(index=False)
-            st.download_button(
-                label="Download Results as CSV",
-                data=csv,
-                file_name='decisiontree_predictions.csv',
-                mime='text/csv'
-            )
+                actual_values = st.session_state.y_test.iloc[:, 0].values
+                results_df = pd.DataFrame({
+                    "Actual": actual_values,
+                    "Predicted": st.session_state.predictions
+                })
+                #
+                # st.write("Predictions on test data:")
+                st.dataframe(results_df)
+                csv = results_df.to_csv(index=False)
+                st.download_button(
+                    label="Download Results as CSV",
+                    data=csv,
+                    file_name='decisiontree_predictions.csv',
+                    mime='text/csv'
+                )
         with st.expander("Evaluate model with Metrics: Accuracy, Confusion Matrix, Classification Report, ROC curve"):
             if st.button("Evaluate"):
                 st.info("Accuracy")
@@ -339,21 +339,21 @@ def ml_model(uploaded_file):
                 st.session_state.predictions = st.session_state.knn_model.predict(st.session_state.x_test)
                 st.write("Predictions on test data:", st.session_state.predictions)
 
-            actual_values = st.session_state.y_test.iloc[:, 0].values
-            results_df = pd.DataFrame({
-                "Actual": actual_values,
-                "Predicted": st.session_state.predictions
-            })
-            #
-            # st.write("Predictions on test data:")
-            st.dataframe(results_df)
-            csv = results_df.to_csv(index=False)
-            st.download_button(
-                label="Download Results as CSV",
-                data=csv,
-                file_name='knn_predictions.csv',
-                mime='text/csv'
-            )
+                actual_values = st.session_state.y_test.iloc[:, 0].values
+                results_df = pd.DataFrame({
+                    "Actual": actual_values,
+                    "Predicted": st.session_state.predictions
+                })
+                #
+                # st.write("Predictions on test data:")
+                st.dataframe(results_df)
+                csv = results_df.to_csv(index=False)
+                st.download_button(
+                    label="Download Results as CSV",
+                    data=csv,
+                    file_name='knn_predictions.csv',
+                    mime='text/csv'
+                )
         with st.expander("Evaluate model with Metrics: Accuracy, Confusion Matrix, Classification Report, ROC curve"):
             if st.button("Evaluate"):
                 st.info("Accuracy")

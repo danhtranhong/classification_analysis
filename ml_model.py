@@ -56,7 +56,7 @@ def ml_model(uploaded_file):
     df = load_data(uploaded_file)
     submenu = st.sidebar.selectbox("ML Models", ["Logistic Regression", "Decision Tree", "KNN"])
     if submenu == "Logistic Regression":
-        st.info("LogisticRegression")
+        st.title("Logistic Regression")
         col1, col2 = st.columns([1, 1])
         with col1:
             st.info("Choose numerical feature ")

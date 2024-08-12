@@ -1,12 +1,9 @@
 import streamlit as st
 import pandas as pd
 
-import matplotlib
 import matplotlib.pyplot as plt
 
 import seaborn as sns
-import plotly.express as px
-from PIL import Image
 # # Increase the image size limit
 # Image.MAX_IMAGE_PIXELS = None  # Disable the limit entirely (use with caution)
 #
